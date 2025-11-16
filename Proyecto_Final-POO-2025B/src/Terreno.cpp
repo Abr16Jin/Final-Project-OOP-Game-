@@ -107,3 +107,36 @@ bool Terreno::agregarAnimal(Animal* auxAnimal)
     listasAnimales[especie].push_back(auxAnimal);
     return true;
 }
+
+Animal* Terreno::removerAnimal(string especie)
+{
+    auto iterador = listasAnimales.find(especie);
+
+    if (iterador == listasAnimales.end())
+    {
+        cout << "Error de Apuesta: No tienes animales de la especie '" << especie << "'." << endl;
+        return nullptr;
+    }
+    vector<Animal*>& stackAnimales = iterador->second;
+
+    if (stackAnimales.empty())
+    {
+        cout << "Error de Apuesta: No te quedan animales de la especie '" << especie << "'." << endl;
+        listasAnimales.erase(iterador);
+        return nullptr;
+    }
+
+    Animal* animalParaApostar = stackAnimales.back();
+
+    stackAnimales.pop_back();
+
+    cout << "Has seleccionado 1x " << animalParaApostar->getNombre() << " para la apuesta." << endl;
+
+    if (stackAnimales.empty())
+    {
+        cout << "(Ya no te quedan más " << especie << "s)" << endl;
+        listasAnimales.erase(iterador);
+    }
+
+    return animalParaApostar;
+}

@@ -61,6 +61,7 @@ class Terreno
 
         bool helperNivel(Nivel);
         bool agregarAnimal(Animal*);
+        Animal* removerAnimal(string especie);
 
 
 };

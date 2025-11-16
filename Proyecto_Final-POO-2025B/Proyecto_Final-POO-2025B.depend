@@ -39,7 +39,7 @@
 	<iostream>
 	<string>
 
-1763323573 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\terreno.h
+1763329752 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\terreno.h
 	<iostream>
 	<string>
 	<vector>
@@ -50,7 +50,7 @@
 	<iostream>
 	<string>
 
-1763323557 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\terreno.cpp
+1763329752 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\terreno.cpp
 	"Terreno.h"
 
 1763277421 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\animal.cpp
@@ -61,4 +61,23 @@
 
 1763317875 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\instancias.cpp
 	"Instancias.h"
+
+1763329752 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\apuesta.cpp
+	"Apuesta.h"
+
+1763327720 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\apuesta.h
+	<iostream>
+	<vector>
+	<utility>
+	"Animal.h"
+	"Terreno.h"
+
+1763329871 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\partida.cpp
+	"Partida.h"
+
+1763329871 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\partida.h
+	<iostream>
+	<utility>
+	"Jugador.h"
+	"Apuesta.h"
 
