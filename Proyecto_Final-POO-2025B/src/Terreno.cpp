@@ -5,11 +5,19 @@ Terreno::Terreno()
 {
     capacidadEspecie = 3;
     capacidadStack = 4;
-    Tipo capacidadTipo = Tipo::PARCELA_P;
+    valorTerreno = 10000; //plata
+    capacidadTipo = Tipo::PARCELA_P;
     nivelPermitidoA = {Nivel::DOMESTICO};
 
 }
-
+Terreno::Terreno(int cEspecie, int cStack, Tipo tipoCap, int valorPlataTerr, vector<Nivel> niveles)
+{
+    capacidadEspecie = cEspecie;
+    capacidadStack = cStack;
+    capacidadTipo = tipoCap;
+    valorTerreno = valorPlataTerr;
+    nivelPermitidoA = niveles;
+}
 Terreno::~Terreno()
 {
     //limpiar animales creados con new
@@ -24,7 +32,7 @@ Terreno::~Terreno()
 
 //METODOS TERRENO
 
-int Terreno::getCespecies()
+int Terreno::getCespecies() const
 {
     return capacidadEspecie;
 }
@@ -32,13 +40,29 @@ void Terreno::setCespecies(int cEspecies)
 {
     capacidadEspecie = cEspecies;
 }
-int Terreno::getCstack()
+int Terreno::getCstack() const
 {
     return capacidadStack;
 }
 void Terreno::setStack(int cStack)
 {
     capacidadStack = cStack;
+}
+Tipo Terreno::getCapacidadP() const
+{
+    return capacidadTipo;
+}
+void Terreno::setCapacidadP(Tipo capacidadNew)
+{
+    capacidadTipo = capacidadNew;
+}
+int Terreno::getValorTerreno() const
+{
+    return valorTerreno;
+}
+void Terreno::setValorTerreno(int newValor)
+{
+    valorTerreno = newValor;
 }
 
 //METODOS ANIMAL/TERRENO
@@ -81,6 +105,5 @@ bool Terreno::agregarAnimal(Animal* auxAnimal)
         }
     //agregar animalito
     listasAnimales[especie].push_back(auxAnimal);
-    cout << "Se agregó un '" << especie << "'." << endl;
     return true;
 }

@@ -23,11 +23,6 @@
     //TERRENOS POR DEFECTO
     Terreno crearTerreno_Inicial();
 
-    /*/GRANJAS
-    Granja JavGranja("FairView", 2700, );
-    //JUGADORES/OPONENTES POR DEFECTO
-    Jugador Javier("Javiercito", 1500, 200, );
-*/
 
 
 #endif // INSTANCIAS_H_INCLUDED

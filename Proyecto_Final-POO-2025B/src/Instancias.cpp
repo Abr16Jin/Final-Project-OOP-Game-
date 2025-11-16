@@ -59,7 +59,7 @@ Animal* crearDragon()
 {
     return new Alta_Clase("Dragon", 500, 4000, 6000);
 }
-
+ // TERRENOS INICIALES
 Terreno crearTerreno_Inicial()
 {
     Terreno terreno;
@@ -75,3 +75,11 @@ Terreno crearTerreno_Inicial()
     cout<<"Terreno inicial LISTO!."<<endl;
     return terreno;
 }
+
+//JUGADOR PRUEBA
+
+
+//GRANJAS
+
+
+

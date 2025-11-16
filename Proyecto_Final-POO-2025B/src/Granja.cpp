@@ -11,13 +11,13 @@ Granja::Granja(string nombreGranja, int valorPlata, Item newItem, Terreno terren
     this -> nombreGranja = nombreGranja;
     valorGranja = valorPlata;
     listaItems.push_back(newItem);
-    terrenoJugador = terrenoJug;
+    terrenoJugador = move(terrenoJug);
 }
 Granja::~Granja(){}
 
 //METODOS GRANJA
 
-string Granja::getNombre()
+string Granja::getNombre() const
 {
     return nombreGranja;
 }
@@ -26,7 +26,7 @@ void Granja::setNombre(string newNombre)
     nombreGranja = newNombre;
 }
 
-int Granja::getValor()
+int Granja::getValor() const
 {
     //sumas de valores en plata de terreno y animales
     return valorGranja;
@@ -39,11 +39,11 @@ void Granja::setItem(Item newItem)
 {
     listaItems.push_back(newItem);
 }
-Terreno Granja::getTerreno()
+const Terreno& Granja::getTerreno() const
 {
     return terrenoJugador;
 }
-void Granja::setTerreno(Terreno terreno)
+void Granja::setTerreno(Terreno&& terreno)
 {
-    terrenoJugador = terreno;
+    terrenoJugador = move(terreno);
 }

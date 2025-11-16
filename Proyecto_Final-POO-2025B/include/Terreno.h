@@ -23,6 +23,7 @@ class Terreno
         int capacidadEspecie;
         int capacidadStack;
         Tipo capacidadTipo;
+        int valorTerreno;
 
         //distribución de animales
         vector<Nivel> nivelPermitidoA;
@@ -30,16 +31,30 @@ class Terreno
 
     public:
         Terreno();
+        Terreno(int, int, Tipo, int, vector<Nivel>);
         ~Terreno();
+
+        // --- INICIO DE LA CORRECCIÓN ---
+        // Deshabilitar la copia (que causa el crash)
+        Terreno(const Terreno&) = delete;
+        Terreno& operator=(const Terreno&) = delete;
+
+        // Habilitar explícitamente el movimiento (que es seguro)
+        Terreno(Terreno&&) = default;
+        Terreno& operator=(Terreno&&) = default;
+        // --- FIN DE LA CORRECCIÓN ---
 
     //METODOS TERRENO
 
-        int getCespecies();
+        int getCespecies() const;
         void setCespecies(int);
-        int getCstack();
+        int getCstack() const;
         void setStack(int);
 
-        Tipo getCapacidadP();
+        int getValorTerreno() const;
+        void setValorTerreno(int);
+
+        Tipo getCapacidadP() const;
         void setCapacidadP(Tipo);
 
         //metodos MAP

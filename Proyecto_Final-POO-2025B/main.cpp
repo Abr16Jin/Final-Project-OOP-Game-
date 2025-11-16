@@ -8,21 +8,24 @@ using namespace std;
 
 int main()
 {
+    Terreno terrenoJav(3, 4, Tipo::RANCHO_M, 30000, {Nivel::DOMESTICO, Nivel::COMBATE});
+    terrenoJav.agregarAnimal(crearVaca());
+    //JUGADORES/OPONENTES POR DEFECTO
+    Granja JavGranja("FairView", 2700, crearpulgas(), move(terrenoJav));
+    Jugador Javier("Javiercito", 1500, 200, move(JavGranja));
+
+    Javier.getGranja().setItem(crearbombaKap());
 
     cout << "Este es el menu principal OwO!" << endl;
 
-    //INSTANCIAS Y DATOS INICIALES
-    Item Pulgas = crearpulgas();
+    cout<<Javier.getNombre()<<" Plata: "<<Javier.getPlata()<<" Prestigio: "<<Javier.getPrestigio()<<endl;
+    cout<<"Granja: "<<Javier.getGranja().getNombre()<<" Terreno LVL: "<<(int)Javier.getGranja().getTerreno().getCapacidadP()+1<<endl;
 
-    Granja grInicial("Los Santos", 1000 , Pulgas, crearTerreno_Inicial());
+    vector<Item> copyList = Javier.getGranja().getItemList();
 
-
-    Jugador hoja("Hojalata99", 100, 100, grInicial);
-
-    cout<<hoja.getNombre()<<" "<<hoja.getPlata()<<" "<<hoja.getPrestigio()<<endl;
-    cout<<"Granja del Jugador: "<<hoja.getNombre()<<" "<<">>"<<hoja.getGranja().getNombre()<<endl;
-    vector<Item> copyList = hoja.getGranja().getItemList();
-    cout<<"PRIMER ITEM ENCONTRADO:"<<" "<<copyList[0].getNombre()<<endl;
-
-    return 0;
+    for(int i=0; i < copyList.size(); i++)
+    {
+        cout<<"ITEM: "<<copyList.at(i).getNombre();
+        cout<<endl;
+    }
 }

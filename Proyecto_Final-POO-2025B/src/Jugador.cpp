@@ -15,13 +15,13 @@ Jugador::Jugador(string nombreJugador, int plataJugador, int prestigioJugador, G
     nombre = nombreJugador;
     plata = plataJugador;
     prestigio = prestigioJugador;
-    granjaJugador = GranjaJu;
+    granjaJugador = move(GranjaJu);
 }
 Jugador::~Jugador(){}
 
 //METODOS JUGADOR
 
-string Jugador::getNombre()
+string Jugador::getNombre() const
 {
     return nombre;
 }
@@ -30,7 +30,7 @@ void Jugador::setNombre(string nombre)
     this -> nombre = nombre;
 }
 
-int Jugador::getPrestigio()
+int Jugador::getPrestigio() const
 {
     return prestigio;
 }
@@ -39,7 +39,7 @@ void Jugador::setPrestigio(int prestigio)
     this -> prestigio = prestigio;
 }
 
-int Jugador::getPlata()
+int Jugador::getPlata() const
 {
     return plata;
 }
@@ -48,11 +48,15 @@ void Jugador::setPlata(int plata)
     this -> plata = plata;
 }
 
-Granja Jugador::getGranja()
+const Granja& Jugador::getGranja() const
 {
     return granjaJugador;
 }
-void Jugador::setGranja(Granja newGranja)
+Granja& Jugador::getGranja()
 {
-    granjaJugador = newGranja;
+    return granjaJugador;
+}
+void Jugador::setGranja(Granja&& newGranja)
+{
+    granjaJugador = move(newGranja);
 }

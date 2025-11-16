@@ -21,17 +21,18 @@ class Jugador
         ~Jugador();
     //metodos Jugador
 
-        string getNombre();
+        string getNombre() const;
         void setNombre(string);
 
-        int getPrestigio();
+        int getPrestigio() const;
         void setPrestigio(int);
 
-        int getPlata();
+        int getPlata() const;
         void setPlata(int);
 
-        Granja getGranja();
-        void setGranja(Granja);
+        const Granja& getGranja() const;
+        Granja& getGranja();
+        void setGranja(Granja&&);
 };
 
 #endif // JUGADOR_H
