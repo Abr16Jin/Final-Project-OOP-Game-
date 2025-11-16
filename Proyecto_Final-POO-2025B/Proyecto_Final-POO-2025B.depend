@@ -1,4 +1,38 @@
 # depslib dependency file v1.0
-1762585528 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\main.cpp
+1763259496 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\main.cpp
 	<iostream>
+	"Jugador.h"
+
+1763257910 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\jugador.cpp
+	"Jugador.h"
+	"Granja.h"
+
+1763257910 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\jugador.h
+	<iostream>
+	<string>
+	"Granja.h"
+
+1763258284 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\granja.cpp
+	"Granja.h"
+
+1763258284 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\granja.h
+	<iostream>
+	<string>
+	<vector>
+	"Item.h"
+
+1763258584 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\item.cpp
+	"Item.h"
+
+1763258584 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\item.h
+	<iostream>
+	<string>
+	"Propiedades.h"
+
+1763252813 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\propiedades.cpp
+	"Propiedades.h"
+
+1763253309 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\propiedades.h
+	<iostream>
+	<string>
 
