@@ -1,25 +1,27 @@
 # depslib dependency file v1.0
-1763259496 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\main.cpp
+1763314809 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\main.cpp
 	<iostream>
 	"Jugador.h"
+	"Instancias.h"
 
-1763257910 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\jugador.cpp
+1763310276 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\jugador.cpp
 	"Jugador.h"
 	"Granja.h"
 
-1763257910 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\jugador.h
+1763314794 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\jugador.h
 	<iostream>
 	<string>
 	"Granja.h"
 
-1763258284 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\granja.cpp
+1763310338 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\granja.cpp
 	"Granja.h"
 
-1763258284 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\granja.h
+1763281724 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\granja.h
 	<iostream>
 	<string>
 	<vector>
 	"Item.h"
+	"Terreno.h"
 
 1763258584 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\item.cpp
 	"Item.h"
@@ -35,4 +37,27 @@
 1763253309 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\propiedades.h
 	<iostream>
 	<string>
+
+1763279127 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\terreno.h
+	<iostream>
+	<string>
+	<vector>
+	<map>
+	"Animal.h"
+
+1763277408 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\animal.h
+	<iostream>
+	<string>
+
+1763311304 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\terreno.cpp
+	"Terreno.h"
+
+1763277421 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\animal.cpp
+	"Animal.h"
+
+1763314874 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\instancias.h
+	"Jugador.h"
+
+1763314874 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\instancias.cpp
+	"Instancias.h"
 

@@ -13,8 +13,8 @@ Jugador::Jugador()
 Jugador::Jugador(string nombreJugador, int plataJugador, int prestigioJugador, Granja GranjaJu)
 {
     nombre = nombreJugador;
-    prestigio = plataJugador;
-    plata = prestigioJugador;
+    plata = plataJugador;
+    prestigio = prestigioJugador;
     granjaJugador = GranjaJu;
 }
 Jugador::~Jugador(){}
