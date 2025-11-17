@@ -211,7 +211,6 @@ private:
     }
 
     // --- HELPER: Verifica si la batalla termino
-    // --- HELPER: Verifica si la batalla termino
     bool chequearFinBatalla()
     {
         // 1. Chequeo por rendicion
@@ -222,7 +221,7 @@ private:
         if (atacante->getGranja().getTerreno().getConteoAnimales() == 0)
         {
             cout << "¡" << atacante->getNombre() << " se ha quedado sin animales!" << endl;
-
+        }
         if (defensor->getGranja().getTerreno().getConteoAnimales() == 0)
         {
             cout << "¡" << defensor->getNombre() << " se ha quedado sin animales!" << endl;

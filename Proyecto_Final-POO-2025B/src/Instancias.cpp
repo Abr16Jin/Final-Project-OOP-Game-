@@ -76,10 +76,53 @@ Terreno crearTerreno_Inicial()
     return terreno;
 }
 
-//JUGADOR PRUEBA
+//JUGADORES DE PRUEBA
 
+Jugador crearOponenteParcela()
+{
+    cout << "Instanciando Oponente (Parcela)..." << endl;
 
-//GRANJAS
+    Terreno terrenoBot(3, 4, Tipo::PARCELA_P, 10000, {Nivel::DOMESTICO});
+    terrenoBot.agregarAnimal(crearGallina());
+    terrenoBot.agregarAnimal(crearGallina());
+    terrenoBot.agregarAnimal(crearConejo());
+
+    Granja granjaBot("Parcela del Bot", 500, crearpulgas(), std::move(terrenoBot));
+
+    return Jugador("Bot Granjero", 300, 80, std::move(granjaBot));
+}
+
+Jugador crearOponenteRancho()
+{
+    cout << "Instanciando Oponente (Rancho)..." << endl;
+    Terreno terrenoBot(3, 4, Tipo::RANCHO_M, 25000, {Nivel::DOMESTICO, Nivel::COMBATE});
+
+    terrenoBot.agregarAnimal(crearVaca());
+    terrenoBot.agregarAnimal(crearGallo());
+    terrenoBot.agregarAnimal(crearGallo());
+    terrenoBot.agregarAnimal(crearPerro());
+
+    Granja granjaBot("Rancho del Rival", 1500, crearEnerg(), std::move(terrenoBot));
+
+    return Jugador("Rival Vaquero", 1000, 250, std::move(granjaBot));
+}
+
+Jugador crearOponenteFinca()
+{
+    cout << "Instanciando Oponente (Finca)..." << endl;
+
+    Terreno terrenoBot(4, 9, Tipo::FINCA_M, 70000, {Nivel::DOMESTICO, Nivel::COMBATE, Nivel::ALTA_CLASE});
+
+    terrenoBot.agregarAnimal(crearCaballo());
+    terrenoBot.agregarAnimal(crearCaballo());
+    terrenoBot.agregarAnimal(crearZorro()); // Nivel ALTA_CLASE
+    terrenoBot.agregarAnimal(crearAguila()); // Nivel ALTA_CLASE
+    terrenoBot.agregarAnimal(crearCerdo());
+
+    Granja granjaBot("Finca del Barón", 5000, crearbombaKap(), std::move(terrenoBot));
+
+    return Jugador("Barón de la Finca", 3000, 800, std::move(granjaBot));
+}
 
 
 

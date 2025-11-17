@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Jugador.h"
 #include "Instancias.h"
+#include "Batalla.h"
 
 /*Bienvenido querido Javier al Archivo MAIN del proyecto final uwu*/
 
@@ -8,24 +9,31 @@ using namespace std;
 
 int main()
 {
-    Terreno terrenoJav(3, 4, Tipo::RANCHO_M, 30000, {Nivel::DOMESTICO, Nivel::COMBATE});
-    terrenoJav.agregarAnimal(crearVaca());
-    //JUGADORES/OPONENTES POR DEFECTO
-    Granja JavGranja("FairView", 2700, crearpulgas(), move(terrenoJav));
-    Jugador Javier("Javiercito", 1500, 200, move(JavGranja));
+    Jugador jugadorReal;
+    cin >> jugadorReal;
 
-    Javier.getGranja().setItem(crearbombaKap());
+    Jugador oponente = crearOponenteRancho();
 
-    cout << "Este es el menu principal OwO!" << endl;
+    cout << "¡Tu oponente es " << oponente.getNombre() << "!" << endl;
+    cout << "Stats del Oponente:" << endl;
+    cout << "  - Prestigio: " << oponente.getPrestigio() << endl;
+    cout << "  - Plata: " << oponente.getPlata() << endl;
+    cout << "  - Animales: " << oponente.getGranja().getTerreno().getConteoAnimales() << endl;
 
-    cout<<Javier.getNombre()<<" Plata: "<<Javier.getPlata()<<" Prestigio: "<<Javier.getPrestigio()<<endl;
-    cout<<"Granja: "<<Javier.getGranja().getNombre()<<" Terreno LVL: "<<(int)Javier.getGranja().getTerreno().getCapacidadP()+1<<endl;
+    oponente.getGranja().getTerreno().agregarAnimal(crearVaca());
 
-    vector<Item> copyList = Javier.getGranja().getItemList();
+    cout << "\nIniciando Partida..." << endl;
+    Partida miPartida(&jugadorReal, &oponente);
 
-    for(int i=0; i < (int)copyList.size(); i++)
-    {
-        cout<<"ITEM: "<<copyList.at(i).getNombre();
-        cout<<endl;
-    }
+    Apuesta miApuesta;
+    miApuesta.setPlata(250);
+    miPartida.setApuesta(std::move(miApuesta));
+
+    Batalla laBatalla(&miPartida);
+    laBatalla.iniciarCombate();
+
+    cout << "\n--- Post-Batalla ---" << endl;
+    cout << "Tu Plata: " << jugadorReal.getPlata() << endl;
+    cout << "Tu Prestigio: " << jugadorReal.getPrestigio() << endl;
+return 0;
 }

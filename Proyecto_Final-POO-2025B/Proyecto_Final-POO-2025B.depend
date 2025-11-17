@@ -1,16 +1,19 @@
 # depslib dependency file v1.0
-1763339903 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\main.cpp
+1763349430 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\main.cpp
 	<iostream>
 	"Jugador.h"
 	"Instancias.h"
+	"Batalla.h"
 
-1763340381 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\jugador.cpp
+1763349044 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\jugador.cpp
 	"Jugador.h"
 	"Granja.h"
+	"Instancias.h"
 
-1763340655 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\jugador.h
+1763349051 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\jugador.h
 	<iostream>
 	<string>
+	<limits>
 	"Granja.h"
 	"Apuesta.h"
 
@@ -55,13 +58,13 @@
 1763345080 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\terreno.cpp
 	"Terreno.h"
 
-1763344069 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\animal.cpp
+1763349590 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\animal.cpp
 	"Animal.h"
 
-1763317824 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\instancias.h
+1763348502 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\instancias.h
 	"Jugador.h"
 
-1763317875 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\instancias.cpp
+1763348502 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\instancias.cpp
 	"Instancias.h"
 
 1763329752 source:c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\src\apuesta.cpp
@@ -82,4 +85,12 @@
 	<utility>
 	"Jugador.h"
 	"Apuesta.h"
+
+1763347531 c:\users\belenes317\documents\programacion\semestre-iii\final-project-oop-game-\proyecto_final-poo-2025b\include\batalla.h
+	<iostream>
+	<string>
+	<vector>
+	<stdexcept>
+	"Jugador.h"
+	"Partida.h"
 

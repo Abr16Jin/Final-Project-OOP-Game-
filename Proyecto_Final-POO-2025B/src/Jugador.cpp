@@ -1,5 +1,6 @@
 #include "Jugador.h"
 #include "Granja.h"
+#include "Instancias.h"
 
 //#include "Granja.h"
 
@@ -95,4 +96,33 @@ void Jugador::operator-=(Apuesta& apuestaPerdida)
 
     this->setPlata(this->getPlata() - apuestaPerdida.getPlata());
     this->setPrestigio(this->getPrestigio() - apuestaPerdida.getPrestigio());
+}
+
+istream& operator>>(istream& in, Jugador& j)
+{
+    cout << "Introduce el nombre de tu personaje: ";
+
+    // --- IMPORTANTE: Limpiar el buffer de 'cin' ---
+    // Si el usuario presionó '1' + ENTER en el menú,
+    // el 'ENTER' (\n) sigue en el buffer.
+    // 'ignore()' limpia ese 'ENTER' para que 'getline' funcione.
+    in.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    // Usamos getline para permitir nombres con espacios
+    getline(in, j.nombre);
+
+    j.prestigio = 100;
+    j.plata = 500;
+    cout << "Creando tu granja inicial..." << endl;
+    Terreno terrenoInicial = crearTerreno_Inicial();
+    Item itemInicial = crearpulgas();
+
+    string nombreGranja = "Granja de " + j.nombre;
+    Granja granjaInicial(nombreGranja, 1000, itemInicial, move(terrenoInicial));
+
+    j.setGranja(move(granjaInicial));
+
+    cout << "¡Bienvenido, " << j.nombre << "! Tu granja esta lista." << endl;
+
+    return in;
 }

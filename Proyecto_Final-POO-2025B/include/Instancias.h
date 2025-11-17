@@ -23,6 +23,12 @@
     //TERRENOS POR DEFECTO
     Terreno crearTerreno_Inicial();
 
+    // OPONENTES DE PRUEBA
+
+    Jugador crearOponenteParcela(); // Nivel 1: Parcela Pequeña
+    Jugador crearOponenteRancho();  // Nivel 2: Rancho Mediano
+    Jugador crearOponenteFinca();    // Nivel 3: Finca Mayor
+
 
 
 #endif // INSTANCIAS_H_INCLUDED

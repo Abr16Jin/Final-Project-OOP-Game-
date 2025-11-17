@@ -23,7 +23,7 @@ Animal::~Animal()
 int Animal::atacar()
 {
     cout<<nombreAnimal<<" lanza ataque:"<<" -"<<ataque<<endl;
-    return (ataque*(-1));
+    return ataque;
 }
 int Animal::getAtaque()
 {
