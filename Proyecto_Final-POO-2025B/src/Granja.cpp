@@ -43,7 +43,42 @@ const Terreno& Granja::getTerreno() const
 {
     return terrenoJugador;
 }
+Terreno& Granja::getTerreno() //modificable sobrecargado
+{
+    return terrenoJugador;
+}
 void Granja::setTerreno(Terreno&& terreno)
 {
     terrenoJugador = move(terreno);
+}
+
+// MOSTRAR items sin modificarlos
+void Granja::mostrarItems() const
+{
+    cout << "  Inventario de Items:" << endl;
+    if (listaItems.empty())
+    {
+        cout << "  - (No hay items)" << endl;
+        return;
+    }
+    for (const Item& item : listaItems)
+    {
+        cout << "  - Item: " << item.getNombre() << endl;
+    }
+}
+Item Granja::removerItem(string nombre)
+{
+    for (auto it = listaItems.begin(); it != listaItems.end(); ++it)
+    {
+        if (it->getNombre() == nombre)
+        {
+            cout << "Usando item: " << nombre << endl;
+
+            Item itemRemovido = *it;
+            listaItems.erase(it);
+            return itemRemovido;
+        }
+    }
+    cout << "Error: No tienes un item llamado '" << nombre << "'." << endl;
+    return Item();
 }

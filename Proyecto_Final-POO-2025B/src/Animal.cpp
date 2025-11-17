@@ -25,6 +25,11 @@ int Animal::atacar()
     cout<<nombreAnimal<<" lanza ataque:"<<" -"<<ataque<<endl;
     return (ataque*(-1));
 }
+int Animal::getAtaque()
+{
+    return ataque;
+}
+
 string Animal::getNombre()
 {
     return nombreAnimal;
@@ -64,3 +69,35 @@ Alta_Clase::Alta_Clase(string nombre, int ataqueA, int vidaA, int valor)
 {
     nivelAnimal = Nivel::ALTA_CLASE;
 }
+
+
+// Sobrecarga de +
+void Animal::operator+(const Item& item)
+{
+    Propiedades props = item.getPropiedades();
+    int salud = props.getSalud();
+    int fuerza = props.getFuerza();
+
+    this->vida += salud;
+    this->ataque += fuerza;
+
+    cout << "'" << this->getNombre() << "' usa '" << item.getNombre() << "'!" << endl;
+    if(salud > 0) cout << "  -> Salud +" << salud << endl;
+    if(fuerza > 0) cout << "  -> Ataque +" << fuerza << endl;
+}
+
+// Sobrecarga de -
+void Animal::operator-(const Item& item)
+{
+    Propiedades props = item.getPropiedades();
+    int salud = props.getSalud();
+    int fuerza = props.getFuerza();
+
+    this->vida += salud;
+    this->ataque += fuerza;
+
+    cout << "'" << this->getNombre() << "' es afectado por '" << item.getNombre() << "'!" << endl;
+    if(salud < 0) cout << "  -> Salud " << salud << endl;
+    if(fuerza < 0) cout << "  -> Ataque " << fuerza << endl;
+}
+// FIN DE SOBRECARGA

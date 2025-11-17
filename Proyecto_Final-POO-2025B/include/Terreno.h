@@ -54,6 +54,7 @@ class Terreno
         int getValorTerreno() const;
         void setValorTerreno(int);
 
+        Nivel getNivelMasAlto() const;
         Tipo getCapacidadP() const;
         void setCapacidadP(Tipo);
 
@@ -62,8 +63,12 @@ class Terreno
         bool helperNivel(Nivel);
         bool agregarAnimal(Animal*);
         Animal* removerAnimal(string especie);
+        bool removerAnimalMuerto(Animal* animalMuerto);
 
-
+        //METODOS para BATALLA
+        void mostrarAnimalesDisponibles() const;
+        Animal* getAnimal(string);
+        int getConteoAnimales() const;
 };
 
 #endif // TERRENO_H

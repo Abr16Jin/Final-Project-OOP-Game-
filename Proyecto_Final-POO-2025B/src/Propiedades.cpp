@@ -14,7 +14,7 @@ Propiedades::~Propiedades(){}
 
 //METODOS PROPIEDADES
 
-int Propiedades::getFuerza()
+int Propiedades::getFuerza() const
 {
     return efectoFuerza;
 }
@@ -23,7 +23,7 @@ void Propiedades::setFuerza(int fuerza)
     efectoFuerza = fuerza;
 }
 
-int Propiedades::getSalud()
+int Propiedades::getSalud() const
 {
     return efectoSalud;
 }

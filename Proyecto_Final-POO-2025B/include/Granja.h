@@ -41,10 +41,14 @@ class Granja
 
         int getValor() const;
 
-        vector<Item> getItemList();  //devuelve elemento del vector de items
-        void setItem(Item);  //anade item al final
+        //items
+        vector<Item> getItemList();
+        void setItem(Item);
+        void mostrarItems() const;
+        Item removerItem(string nombre);
 
         const Terreno& getTerreno() const;
+        Terreno& getTerreno();
         void setTerreno(Terreno&&);
 };
 

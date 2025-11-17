@@ -60,3 +60,39 @@ void Jugador::setGranja(Granja&& newGranja)
 {
     granjaJugador = move(newGranja);
 }
+
+//SOBRECARGAS
+// El Jugador GANA
+void Jugador::operator+=(Apuesta& apuestaGanada)
+{
+    cout << "¡" << this->getNombre() << " gana la apuesta!" << endl;
+
+    this->setPlata(this->getPlata() + apuestaGanada.getPlata());
+    this->setPrestigio(this->getPrestigio() + apuestaGanada.getPrestigio());
+
+    //Gana los animales (transfiere propiedad)
+    vector<Animal*>& animalesApostados = apuestaGanada.getAnimales();
+    while (!animalesApostados.empty())
+    {
+        Animal* animal = animalesApostados.back();
+        animalesApostados.pop_back();
+
+        // Lo añade a su terreno
+        this->getGranja().getTerreno().agregarAnimal(animal);
+    }
+
+    // Gana el terreno (transfiere propiedad)
+    if (apuestaGanada.getTerrenoApostado())
+    {
+        this->getGranja().setTerreno(std::move(apuestaGanada.getTerreno()));
+    }
+}
+
+// El Jugador PIERDE la apuesta
+void Jugador::operator-=(Apuesta& apuestaPerdida)
+{
+    cout << "¡" << this->getNombre() << " pierde la apuesta!" << endl;
+
+    this->setPlata(this->getPlata() - apuestaPerdida.getPlata());
+    this->setPrestigio(this->getPrestigio() - apuestaPerdida.getPrestigio());
+}

@@ -17,10 +17,10 @@ class Propiedades
 
     //Metodos Propiedades
 
-        int getFuerza();
+        int getFuerza() const;
         void setFuerza(int);
 
-        int getSalud();
+        int getSalud() const;
         void setSalud(int);
 };
 

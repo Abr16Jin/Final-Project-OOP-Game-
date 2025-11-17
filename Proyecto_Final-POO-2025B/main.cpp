@@ -23,7 +23,7 @@ int main()
 
     vector<Item> copyList = Javier.getGranja().getItemList();
 
-    for(int i=0; i < copyList.size(); i++)
+    for(int i=0; i < (int)copyList.size(); i++)
     {
         cout<<"ITEM: "<<copyList.at(i).getNombre();
         cout<<endl;

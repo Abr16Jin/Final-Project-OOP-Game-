@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Item.h"
 
 using namespace std;
 
@@ -28,11 +29,15 @@ class Animal
         ~Animal();
     //METODOS ANIMAL
         int atacar();
+        int getAtaque();
         string getNombre();
         int getVida();
         void setVida(int);
         int getValor();
         Nivel getNivel();
+
+        void operator+(const Item& item);
+        void operator-(const Item& item);
 };
 
 //ANIMALES QUE HARÁN HERENCIA DE ANIMAL

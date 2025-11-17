@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Granja.h"
+#include "Apuesta.h"
 
 using namespace std;
 
@@ -33,6 +34,9 @@ class Jugador
         const Granja& getGranja() const;
         Granja& getGranja();
         void setGranja(Granja&&);
+
+        void operator+=(Apuesta& apuestaGanada); // Ganador
+        void operator-=(Apuesta& apuestaPerdida); // Perdedor
 };
 
 #endif // JUGADOR_H

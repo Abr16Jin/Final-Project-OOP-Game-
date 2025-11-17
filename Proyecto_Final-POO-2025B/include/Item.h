@@ -19,10 +19,10 @@ class Item
         ~Item();
         //METODOS ITEM
 
-        string getNombre();
+        string getNombre() const;
         void setNombre(string);
 
-        Propiedades getPropiedades();
+        Propiedades getPropiedades() const;
         void setPropiedades(Propiedades*);
 
 };

@@ -16,7 +16,7 @@ Item::~Item(){}
 
 //METODOS ITEM
 
-string Item::getNombre()
+string Item::getNombre() const
 {
     return nombreItem;
 }
@@ -25,7 +25,7 @@ void Item::setNombre(string nombre)
     nombreItem = nombre;
 }
 
-Propiedades Item::getPropiedades()
+Propiedades Item::getPropiedades() const
 {
     return propiedades;
 }
