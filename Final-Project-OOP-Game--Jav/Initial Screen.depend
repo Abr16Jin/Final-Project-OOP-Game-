@@ -1,0 +1,130 @@
+# depslib dependency file v1.0
+1763346728 source:c:\users\pc\documents\backup\udg\semestre iii\poo\test\initial screen\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+	<string>
+	"logo.h"
+
+1763344198 c:\users\pc\documents\backup\udg\semestre iii\poo\test\initial screen\logo.h
+	<string>
+
+1763452950 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+	<string>
+	<vector>
+	<stdexcept>
+	"logo.h"
+	"Jugador.h"
+	"Batalla.h"
+	"Instancias.h"
+	"Trueque.h"
+
+1763346949 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\logo.h
+	<string>
+
+1763349051 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\jugador.h
+	<iostream>
+	<string>
+	<limits>
+	"Granja.h"
+	"Apuesta.h"
+
+1763344707 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\granja.h
+	<iostream>
+	<string>
+	<vector>
+	<utility>
+	"Item.h"
+	"Terreno.h"
+
+1763339878 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\item.h
+	<iostream>
+	<string>
+	"Propiedades.h"
+
+1763339527 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\propiedades.h
+	<iostream>
+	<string>
+
+1763453454 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\terreno.h
+	<iostream>
+	<string>
+	<vector>
+	<map>
+	"Animal.h"
+
+1763344069 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\animal.h
+	<iostream>
+	<string>
+	"Item.h"
+
+1763339259 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\apuesta.h
+	<iostream>
+	<vector>
+	<utility>
+	"Animal.h"
+	"Terreno.h"
+
+1763445966 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\batalla.h
+	<iostream>
+	<string>
+	<vector>
+	<stdexcept>
+	"Jugador.h"
+	"Partida.h"
+
+1763446451 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\partida.h
+	<iostream>
+	<utility>
+	"Jugador.h"
+	"Apuesta.h"
+
+1763348502 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\instancias.h
+	"Jugador.h"
+
+1763349590 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\animal.cpp
+	"Animal.h"
+
+1763329752 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\apuesta.cpp
+	"Apuesta.h"
+
+1763344707 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\granja.cpp
+	"Granja.h"
+
+1763413827 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\instancias.cpp
+	"Instancias.h"
+
+1763339867 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\item.cpp
+	"Item.h"
+
+1763349044 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\jugador.cpp
+	"Jugador.h"
+	"Granja.h"
+	"Instancias.h"
+
+1763446185 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\partida.cpp
+	"Partida.h"
+
+1763339527 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\propiedades.cpp
+	"Propiedades.h"
+
+1763453454 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\terreno.cpp
+	"Terreno.h"
+
+1763445769 source:c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\batalla.cpp
+	"Batalla.h"
+
+1763453905 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\trueque.h
+	"consola_utils.h"
+	"Jugador.h"
+	<string>
+	<iostream>
+
+1763452102 c:\users\belenes317\documents\programacion\semestre-iii\proyectofinalpoo-2025b\final-project-oop-game--jav\final-project-oop-game--jav\consola_utils.h
+	<windows.h>
+	<string>
+	<iostream>
+
